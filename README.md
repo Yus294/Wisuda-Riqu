@@ -63,6 +63,7 @@
       margin-top: 15px; /* Margin atas */
       font-weight: bold; /* Teks tebal */
       color: #444; /* Warna teks abu-abu tua */
+      text-align: center; /* Teks label rata tengah */
     }
 
     /* Styling untuk input teks, textarea, dan select */
@@ -75,6 +76,7 @@
       border: 1px solid #ccc; /* Border abu-abu tipis */
       border-radius: 8px; /* Sudut membulat */
       font-size: 1rem; /* Ukuran font relatif */
+      text-align: center; /* Teks input dan select rata tengah */
     }
 
     /* Styling khusus untuk textarea agar bisa di-resize vertikal */
