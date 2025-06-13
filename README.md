@@ -26,8 +26,11 @@
 
     /* Styling untuk header */
     header {
-      text-align: center; /* Pusatkan teks dan elemen dalam header */
+      display: flex; /* Menggunakan flexbox untuk tata letak */
+      flex-direction: column; /* Elemen ditumpuk secara vertikal */
+      align-items: center; /* Pusatkan semua elemen secara horizontal */
       margin-top: 30px; /* Margin atas */
+      /* text-align: center; dihapus karena align-items: center sudah menangani pemusatan horizontal */
     }
 
     /* Styling untuk gambar logo di header */
@@ -127,6 +130,7 @@
   <header>
     <img src="Lambang Riqu.jfif" alt="Logo Rumah Tahfizh Riyadhul Qur'an">
 
+    <!-- Div ini sekarang akan terpusat secara horizontal oleh flexbox di parent header -->
     <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <i class="fas fa-pen-nib" style="font-size: 1.5rem; color: #2e7d32;"></i>
