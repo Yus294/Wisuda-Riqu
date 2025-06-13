@@ -1,100 +1,12 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello, World!</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-      <h1 class="title">Hello World! </h1>
-      <p id="currentTime"></p>
-      <script src="script.js"></script>
-  </body>
-</html><!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rumah Tahfizh Riyadhul Qur'an</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
-    header {
-      text-align: center;
-      margin-top: 30px;
-    }
-    header img {
-      max-width: 120px;
-      height: auto;
-    }
-    h1 {
-      margin-top: 15px;
-      margin-bottom: 20px;
-      color: #2e7d32;
-      text-align: center;
-      font-size: 1.8rem;
-      padding: 0 20px;
-    }
-    form {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 500px;
-      margin-bottom: 40px;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #444;
-    }
-    input[type="text"], textarea, select { /* Added select to styling */
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    textarea {
-      resize: vertical;
-    }
-    button {
-      margin-top: 25px;
-      padding: 12px 25px;
-      background-color: #43a047;
-      color: white;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 100%;
-    }
-    button:hover {
-      background-color: #388e3c;
-    }
-    @media screen and (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-      form {
-        padding: 20px;
-      }
-    }
-  </style>
+  <!-- Menghubungkan file CSS eksternal -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Script EmailJS dan Font Awesome tetap di sini -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function(){
@@ -163,9 +75,12 @@
 
       emailjs.sendForm("service_5l5ovxe", "template_q1igllh", this)
         .then(function(response) {
-          alert("Permintaan Anda sukses!");
+          // Menggunakan alert kustom karena alert() tidak disarankan
+          // Anda bisa mengganti ini dengan modal pop-up yang lebih menarik
+          alert("Permintaan Anda sukses!"); 
           document.getElementById("formSantri").reset();
         }, function(error) {
+          // Menggunakan alert kustom karena alert() tidak disarankan
           alert("Gagal mengirim. Silakan periksa koneksi atau ID EmailJS Anda.");
         });
     });
