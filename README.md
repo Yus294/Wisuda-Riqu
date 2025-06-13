@@ -1,100 +1,118 @@
-# Wisuda-Riqu
-<html>
-  <head>
-    <title>Hello, World!</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-      <h1 class="title">Hello World! </h1>
-      <p id="currentTime"></p>
-      <script src="script.js"></script>
-  </body>
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rumah Tahfizh Riyadhul Qur'an</title>
+
+  <!-- CSS Styles - Semua gaya visual ditempatkan di sini -->
   <style>
+    /* Atur box-sizing untuk semua elemen */
     * {
       box-sizing: border-box;
     }
+
+    /* Styling untuk body halaman */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font utama */
+      background: linear-gradient(to bottom right, #e8f5e9, #ffffff); /* Gradien latar belakang */
+      margin: 0; /* Tanpa margin di sekitar body */
+      padding: 0; /* Tanpa padding di sekitar body */
+      display: flex; /* Menggunakan flexbox untuk tata letak */
+      flex-direction: column; /* Elemen ditumpuk secara vertikal */
+      align-items: center; /* Pusatkan elemen secara horizontal */
+      min-height: 100vh; /* Tinggi minimum halaman setinggi viewport */
     }
+
+    /* Styling untuk header */
     header {
-      text-align: center;
-      margin-top: 30px;
+      text-align: center; /* Pusatkan teks dan elemen dalam header */
+      margin-top: 30px; /* Margin atas */
     }
+
+    /* Styling untuk gambar logo di header */
     header img {
-      max-width: 120px;
-      height: auto;
+      max-width: 120px; /* Lebar maksimum gambar */
+      height: auto; /* Tinggi otomatis menjaga rasio aspek */
     }
+
+    /* Styling untuk judul utama (h1) */
     h1 {
-      margin-top: 15px;
-      margin-bottom: 20px;
-      color: #2e7d32;
-      text-align: center;
-      font-size: 1.8rem;
-      padding: 0 20px;
+      margin-top: 15px; /* Margin atas */
+      margin-bottom: 20px; /* Margin bawah */
+      color: #2e7d32; /* Warna teks hijau tua */
+      text-align: center; /* Pusatkan teks */
+      font-size: 1.8rem; /* Ukuran font relatif */
+      padding: 0 20px; /* Padding samping */
     }
+
+    /* Styling untuk formulir */
     form {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 500px;
-      margin-bottom: 40px;
+      background-color: #ffffff; /* Latar belakang putih */
+      padding: 25px; /* Padding di dalam formulir */
+      border-radius: 15px; /* Sudut membulat */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+      width: 90%; /* Lebar formulir 90% dari parent */
+      max-width: 500px; /* Lebar maksimum formulir */
+      margin-bottom: 40px; /* Margin bawah */
     }
+
+    /* Styling untuk label formulir */
     label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #444;
+      display: block; /* Menjadikan label sebagai blok elemen */
+      margin-top: 15px; /* Margin atas */
+      font-weight: bold; /* Teks tebal */
+      color: #444; /* Warna teks abu-abu tua */
     }
-    input[type="text"], textarea, select { /* Added select to styling */
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
+
+    /* Styling untuk input teks, textarea, dan select */
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%; /* Lebar penuh */
+      padding: 12px; /* Padding di dalam input */
+      margin-top: 6px; /* Margin atas */
+      border: 1px solid #ccc; /* Border abu-abu tipis */
+      border-radius: 8px; /* Sudut membulat */
+      font-size: 1rem; /* Ukuran font relatif */
     }
+
+    /* Styling khusus untuk textarea agar bisa di-resize vertikal */
     textarea {
       resize: vertical;
     }
+
+    /* Styling untuk tombol submit */
     button {
-      margin-top: 25px;
-      padding: 12px 25px;
-      background-color: #43a047;
-      color: white;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 100%;
+      margin-top: 25px; /* Margin atas */
+      padding: 12px 25px; /* Padding di dalam tombol */
+      background-color: #43a047; /* Warna latar belakang hijau */
+      color: white; /* Warna teks putih */
+      font-size: 1rem; /* Ukuran font relatif */
+      border: none; /* Tanpa border */
+      border-radius: 8px; /* Sudut membulat */
+      cursor: pointer; /* Kursor berubah menjadi pointer saat di-hover */
+      transition: background-color 0.3s ease; /* Transisi halus saat hover */
+      width: 100%; /* Lebar penuh */
     }
+
+    /* Efek hover untuk tombol */
     button:hover {
-      background-color: #388e3c;
+      background-color: #388e3c; /* Warna latar belakang hijau lebih gelap saat di-hover */
     }
+
+    /* Media Queries untuk responsivitas pada layar kecil (maks 600px) */
     @media screen and (max-width: 600px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk judul */
       }
       form {
-        padding: 20px;
+        padding: 20px; /* Padding formulir lebih kecil */
       }
     }
   </style>
+
+  <!-- Script EmailJS dan Font Awesome -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function(){
@@ -163,9 +181,12 @@
 
       emailjs.sendForm("service_5l5ovxe", "template_q1igllh", this)
         .then(function(response) {
+          // Menggunakan alert kustom karena alert() tidak disarankan
+          // Anda bisa mengganti ini dengan modal pop-up yang lebih menarik
           alert("Permintaan Anda sukses!");
           document.getElementById("formSantri").reset();
         }, function(error) {
+          // Menggunakan alert kustom karena alert() tidak disarankan
           alert("Gagal mengirim. Silakan periksa koneksi atau ID EmailJS Anda.");
         });
     });
