@@ -54,9 +54,10 @@
       padding: 25px; /* Padding di dalam formulir */
       border-radius: 15px; /* Sudut membulat */
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-      width: 90%; /* Lebar formulir 90% dari parent */
-      max-width: 500px; /* Lebar maksimum formulir */
+      /* Properti width dan max-width di sini telah dihapus sesuai permintaan Anda */
       margin-bottom: 40px; /* Margin bawah */
+      width: 100%; /* Agar formulir mengambil lebar penuh yang tersedia */
+      max-width: 800px; /* Menambahkan max-width yang lebih besar agar tidak terlalu melebar pada layar sangat lebar, namun tetap fleksibel */
     }
 
     /* Styling untuk label formulir */
@@ -81,7 +82,7 @@
     input[type="text"],
     textarea,
     select {
-      width: 100%; /* Lebar penuh */
+      width: 100%; /* Lebar penuh dari parent (formulir) */
       padding: 12px; /* Padding di dalam input */
       margin-top: 6px; /* Margin atas */
       border: 1px solid #ccc; /* Border abu-abu tipis */
