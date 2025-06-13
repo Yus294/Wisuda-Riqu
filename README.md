@@ -183,7 +183,7 @@
     </select>
 
     <label for="pencapaian">Sebutkan Pencapaian Terakhir Santri:<br>
-      <small>Contoh: Tilawah Al-Baqarah : 150 / Tahfizh Al-Baqarah : 150</small>
+      <small>Contoh: Tilawah-Al-Baqarah:150 / Tahfizh-Al-Baqarah:150</small>
     </label>
     <textarea id="pencapaian" name="pencapaian_santri" rows="4" placeholder="Tulis pencapaian di sini..." required></textarea>
 
