@@ -30,7 +30,6 @@
       flex-direction: column; /* Elemen ditumpuk secara vertikal */
       align-items: center; /* Pusatkan semua elemen secara horizontal */
       margin-top: 30px; /* Margin atas */
-      /* text-align: center; dihapus karena align-items: center sudah menangani pemusatan horizontal */
     }
 
     /* Styling untuk gambar logo di header */
@@ -69,6 +68,15 @@
       text-align: center; /* Teks label rata tengah */
     }
 
+    /* Styling untuk teks kecil di dalam label (seperti contoh) */
+    label small {
+      display: block; /* Penting untuk membuatnya menjadi elemen blok agar text-align bekerja */
+      text-align: center; /* Pusatkan teks kecil */
+      margin-top: 5px; /* Sedikit margin atas untuk pemisah visual */
+      color: #777; /* Warna teks sedikit lebih terang */
+      font-weight: normal; /* Kembali ke ketebalan normal */
+    }
+
     /* Styling untuk input teks, textarea, dan select */
     input[type="text"],
     textarea,
@@ -80,6 +88,14 @@
       border-radius: 8px; /* Sudut membulat */
       font-size: 1rem; /* Ukuran font relatif */
       text-align: center; /* Teks input dan select rata tengah */
+    }
+
+    /* Styling untuk placeholder text di semua input dan textarea */
+    input::placeholder,
+    textarea::placeholder,
+    select::placeholder {
+      text-align: center; /* Pusatkan teks placeholder */
+      color: #999; /* Warna abu-abu yang lebih terang untuk placeholder */
     }
 
     /* Styling khusus untuk textarea agar bisa di-resize vertikal */
